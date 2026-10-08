@@ -1,0 +1,28 @@
+{
+    "name": "nodex/installer",
+    "description": "The official CLI project installer for NodeX Studio Framework v1.1.0.",
+    "type": "library",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nguyễn Anh Kiệt",
+            "email": "nanhkiet2006.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "symfony/console": "^7.0",
+        "symfony/process": "^7.0"
+    },
+    "bin": [
+        "bin/nodex"
+    ],
+    "autoload": {
+        "psr-4": {
+            "NodeX\\Installer\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

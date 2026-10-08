@@ -1,0 +1,38 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Design by: NodeX Studio
+ * Telegram: @nodexstudio
+ * NodeX Studio Global CLI Installer Executable
+ */
+
+$autoloadFiles = [
+    __DIR__ . '/../vendor/autoload.php',
+    __DIR__ . '/../../../autoload.php',
+    __DIR__ . '/../../../../autoload.php',
+];
+
+$loaded = false;
+foreach ($autoloadFiles as $file) {
+    if (file_exists($file)) {
+        require_once $file;
+        $loaded = true;
+        break;
+    }
+}
+
+if (!$loaded) {
+    fwrite(STDERR, "✘ Composer autoloader not found. Please run 'composer install' inside nodex-installer.\n");
+    exit(1);
+}
+
+use NodeX\Installer\Console\NewCommand;
+use Symfony\Component\Console\Application;
+
+$app = new Application('NodeX Studio Project Installer', '1.0.0');
+$app->add(new NewCommand());
+$app->setDefaultCommand('new', false);
+$app->run();
