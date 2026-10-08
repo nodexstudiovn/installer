@@ -2,7 +2,7 @@
     "name": "nodexstudiovn/installer",
     "description": "The official CLI project installer for NodeX Studio Framework v1.1.0.",
     "type": "library",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": "MIT",
     "authors": [
         {

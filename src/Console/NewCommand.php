@@ -41,7 +41,7 @@ class NewCommand extends Command
         $output->writeln("\n<info>⚡ Đang khởi tạo dự án NodeX Studio Framework v1.1.0: {$projectName}...</info>\n");
 
         // 1. Tải bản sao mã nguồn NodeX Studio Framework
-        $repoUrl = 'https://github.com/nodexstudio/framework.git';
+        $repoUrl = 'https://github.com/nodexstudiovn/framework.git';
         
         $output->writeln("<comment>[1/4] Đang clone bộ khung mã nguồn NodeX Studio từ Repository...</comment>");
         $gitProcess = new Process(['git', 'clone', '--depth=1', $repoUrl, $targetPath]);
